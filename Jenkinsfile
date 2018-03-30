@@ -14,7 +14,14 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'echo "Ansible ping localhost"'
-                sh 'ansible localhost -m ping'
+                sh 'ansible localhost -m ping > /tmp/myoutput.txt'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo "Ansible ping localhost"'
+                sh 'ls -l /tmp/myoutput.txt'
+                sh 'cat /tmp/myoutput.txt'
             }
         }
     }
