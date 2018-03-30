@@ -11,7 +11,7 @@ pipeline {
                 sh 'ansible --version'
             }
         }
-        stage('test') {
+        stage('Test') {
             steps {
                 sh 'echo "Ansible ping localhost"'
                 sh 'ansible localhost -m ping'
