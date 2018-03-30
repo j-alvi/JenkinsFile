@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"'
+                sh 'echo "verify Ansible is installed"'
                 sh '''
-                    echo "Multiline shell steps works too"
+                    echo "Checking Ansible"
                     ls -lah
                 '''
                 sh 'ansible --version'
