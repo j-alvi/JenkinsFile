@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "verify Ansible is installed!!!!"'
+                sh 'echo "verify Ansible is installed!!!"'
                 sh '''
                     echo "Checking $TEST"
                     ls -lah
