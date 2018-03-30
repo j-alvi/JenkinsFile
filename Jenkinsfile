@@ -17,5 +17,10 @@ pipeline {
                 sh 'ansible localhost -m ping'
             }
         }
+         stage('Verify') {
+            steps {
+                sh 'echo "Ansible ping localhost Success!"'
+            }
+        }
     }
 }
