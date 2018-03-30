@@ -5,12 +5,11 @@ pipeline {
             steps {
                 sh 'echo "verify Ansible is installed"'
                 sh '''
-                    echo "Checking Ansible"
+                    echo "Checking $TEST"
                     ls -lah
                 '''
                 sh 'ansible --version'
             }
-        }
         }
     }
 }
