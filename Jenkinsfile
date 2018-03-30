@@ -11,16 +11,5 @@ pipeline {
                 sh 'ansible --version'
             }
         }
-        stage('test') {
-            steps {
-                sh 'echo "Ansible ping localhost"'
-                sh 'ansible localhost -m ping'
-            }
-        }
-         stage('Verify') {
-            steps {
-                sh 'echo "Ansible ping localhost Success!"'
-            }
-        }
     }
 }
