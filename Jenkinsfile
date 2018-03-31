@@ -8,7 +8,7 @@ pipeline {
                     echo "Checking $TEST"
                     ls -lah
                 '''
-                sh 'ansiblee --version'
+                sh 'ansible --version'
             }
         }
     }
